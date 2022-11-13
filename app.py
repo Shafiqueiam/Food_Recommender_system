@@ -40,7 +40,7 @@ if selected_food is ('Lunch'):
     def recommend(food):
         food_index = data[data['Lunch'] == food].index[0]
         distances = Lunch_list[food_index]
-        food_list = sorted(list(enumerate(distances)), reverse = True, key = lambda x: x[1])[1:6]
+        food_list = sorted(list(enumerate(distances)), reverse = True, key = lambda x: x[1])[1:2]
 
         recommended_foods = []
         for i in food_list:
@@ -58,7 +58,7 @@ if selected_food is ('Dinner'):
     def recommend(food):
         food_index = data[data['Dinner'] == food].index[0]
         distances = Dinner_list[food_index]
-        food_list = sorted(list(enumerate(distances)), reverse = True, key = lambda x: x[1])[1:6]
+        food_list = sorted(list(enumerate(distances)), reverse = True, key = lambda x: x[1])[1:2]
 
         recommended_foods = []
         for i in food_list:
